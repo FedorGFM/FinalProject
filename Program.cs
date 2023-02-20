@@ -10,6 +10,8 @@ for (int i = 0; i < stringArray.Length; i++)
 
 string[] stringArrEll = StringArrayElements(stringArray);
 
+PrintArray(stringArray);
+Console.Write(" -> ");
 PrintArray(stringArrEll);
 
 string[] StringArrayElements(string[] arr)
@@ -38,8 +40,8 @@ void PrintArray(string[] arr)
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        if(i < arr.Length - 1) Console.Write(arr[i] + ", ");
-        else Console.Write(arr[i]);
+        if(i < arr.Length - 1) Console.Write($"\"{arr[i]}\"" + ", ");
+        else Console.Write($"\"{arr[i]}\"");
     }
-    Console.WriteLine("]");
+    Console.Write("]");
 }
